@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+<title>New Conversation</title>
+{% endblock title %}
+
+{% block content %}
+<h1>New Conversation</h1>
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="content">Message</label>
+        <textarea class="form-control" id="content" name="content" rows="3" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>
+{% endblock content %}
